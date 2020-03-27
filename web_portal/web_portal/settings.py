@@ -51,6 +51,7 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'web_portal.urls'
+STATIC_URL = '/static/'
 
 TEMPLATES = [
     {

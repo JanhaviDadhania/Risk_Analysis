@@ -11,12 +11,53 @@
 		{% endfor %}
 	{% endif %}
 
+	<div class = "container">
+		<div class = "row">
+			<div class = "col-lg-9">
+				<h1>Death Prediction</h1>
+			</div>
+			<div class = "col-lg-3">
+				<div class="button">
+                    <div class="wrap">
+                        <a href="{% url 'transplant' %}">
+                            <div class="first">Transplant Prediction</div>
+                            <div class="second">go</div>
+                        </a>
+                    </div>
+                </div>
+			</div>
+		</div>
+	</div>
 
-	<h1>New User? Register Here</h1>
-	<form method='POST'>
+	<div class = "gap">
+	</div>
+
+	<div class="covering">
+	  <div class="container-fluid table-class">
+	    <div class="black " >
+	      <div class="inner cover">
+	        <div class="centerUp">
+	          <div class="questionaire">
+				<form method='POST'>
+					<ul class="progress-form form-group animated fadeInRightBig  activate">
+					{% csrf_token %}
+					<center>{{ form.as_ul }}</center>
+					</ul>
+					<center><br><button class = "done" type = "submit">Check</button><br><br><br></center>
+				</form>
+	          </div>
+	        </div>
+	        <div class="clearfix"></div>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+
+	<!-- <form method='POST'>
 		{% csrf_token %}
-		{{ form.as_p }}
+		<center>{{ form.as_p }}</center>
 		<button type = "submit">Login</button>
-	</form>
+	</form> -->
 
 {% endblock content %}

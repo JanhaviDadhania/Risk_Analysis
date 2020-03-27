@@ -4,21 +4,48 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	{% if title %}
-		<title>{{title}}</title>
-	{% else %}
-		<title>CSE-HUB</title>
-	{% endif %}
+	<title>Risk Analysis</title>
 </head>
 <body style=" overflow-x: hidden; padding-bottom: 120px;">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="../../static/style.css">
 
-	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
-
+	<!-- header -->
+    <div class="header-logo" style = "background:url('../../static/bg.png')">
+      <div class = "container-fluid">
+          <div class = "row h-100">
+              <div class = "col-lg-3 my-auto">
+                  <div class="logo">
+                    <a href="#">
+					  {% load static %}
+                      <img src="{% static 'proyecto_anii.png' %}" />
+                    </a>
+                  </div>
+              </div>
+              <div class = "col-lg-5 my-auto">
+                  <center><h2 class = "head">Risk Analysis of Patients under National Liver Transplant Program, Uruguay</h2></center>
+              </div>
+              <div class = "col-lg-2 my-auto">
+                  <div class="logo1">
+                    <a href="#">
+					  {% load static %}
+                      <img src="{% static 'UdelaR Logo.png' %}" />
+                    </a>
+                  </div>
+              </div>
+              <div class = "col-lg-2 my-auto">
+                  <div class="logo2">
+                    <a href="#">
+					  {% load static %}
+                      <img src="{% static 'Hospital Militar DNSFFAA Logo.png' %}" />
+                    </a>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
 
 	<div class="container p-5">
 		{% block content %}
@@ -28,15 +55,29 @@
 		{% block content-unindent %}
 
 		{% endblock %}
-	<div class="container-fluid">
-		<div class="row">
-			<footer id="sticky-footer" class="py-4 bg-dark text-white-50" style="bottom: 0; position: fixed; width: 100%; color: #e05ea0;">
-		    	<div class="container text-center">
-		    		<small>Copyright &copy; Your Website</small>
-		    	</div>
-			</footer>
+		<div class="container-fluid">
+			<div class="row">
+				<footer id="sticky-footer" class="py-4 bg-dark footer">
+	                <div class="container-fluid text-center text-md-left">
+	                  <div class="row">
+	                      <div class="col-md-1 mb-md-0 mb-3">
+	                      </div>
+	                    <div class="col-md-5 mt-md-0 mt-3">
+	                      <p>El análisis se realizó en el marco del proyecto ANII "Inteligencia Computacional en Salud. Creando Herramientas para Predecir la Sobrevida en Trasplante Hepático" (Resol. FSDA_1_2017_1_143653)</p>
+	                    </div>
+	                    <hr class="clearfix w-100 d-md-none pb-3">
+	                    <div class="col-md-5 mb-md-0 mb-3">
+	                      <p>The analysis has been performed under the #proyectoANII "Computational Intelligence in Healthcare — Developing Tools for Prediction of Survival in Liver Transplant Patients. (Project Number: FSDA_1_2017_1_143653)</p>
+	                    </div>
+	                    <div class="col-md-1 mb-md-0 mb-3">
+	                    </div>
+	                  </div>
+	                </div>
+	                <div class="footer-copyright text-center py-3">
+	                </div>
+				</footer>
+			</div>
 		</div>
-	</div>
 
 </body>
 </html>
