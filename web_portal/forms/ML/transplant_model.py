@@ -59,6 +59,7 @@ for item in X :
     else :
         Y.append(float(item))
 X = Y
+print(X)
 final = []
 final.append(X)
 
