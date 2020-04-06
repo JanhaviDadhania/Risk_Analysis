@@ -228,12 +228,15 @@ border-top-color: #ffb500;
 .form-group label { box-shadow:none; border-radius:0; font-size:23px; color:#000; font-weight:100; padding:10px 0;}
 .form-group label h1 {font-size:48px; font-weight:100;}
 .form-group input, .form-group textarea  { border:none;  background:rgba(96,125,139, .2);height:auto; padding:15px 15px; box-shadow:none; border-radius:10px; font-size:20px; color:#343a40; outline: 0; width:100% }
+.form-group select, .form-group textarea  { border:none;  background:rgba(96,125,139, .2);height:auto; padding:15px 15px; box-shadow:none; border-radius:10px; font-size:20px; color:#343a40; outline: 0; width:100% }
 
 .form-group textarea {font-size:18px; padding:10px; min-height:300px;}
 
 .form-group input:focus, .form-group textarea:focus {outline:0; border:none;  box-shadow:none;}
+.form-group select:focus, .form-group textarea:focus {outline:0; border:none;  box-shadow:none;}
 
 input:active  {outline:0 !important}
+select:active  {outline:0 !important}
 .navbar {}
 .navbar-brand { font-weight:normal; margin-top:30px;} .h1-header {font-weight:100; margin-top:0; font-size:36px; background:#e74c3c; padding:25px; margin-left:-10px; width:400px; position:absolute}
 ::focus {outline:none !important}
@@ -300,7 +303,9 @@ font-size: 24px;
 ::-webkit-input-placeholder {
    color:rgba(255,255,255, 0.3) !important  ;
 }
-
+::-webkit-select-placeholder {
+   color:rgba(255,255,255, 0.3) !important  ;
+}
 :-moz-placeholder { /* Firefox 18- */
   color: #348779 !important  ;
 }
@@ -312,7 +317,9 @@ font-size: 24px;
 :-ms-input-placeholder {
    color: #348779 !important  ;
 }
-
+:-ms-select-placeholder {
+   color: #348779 !important  ;
+}
 [contenteditable="true"]:focus > style{
 display:block;
 font-size: .75em;
@@ -399,7 +406,17 @@ color: #fff;
 outline: 0;
 width: 100%;
 }
-
+.form-group select, .form-group textarea {
+border: none;
+background: rgba(255,255,255, .2);
+padding: 35px 15px;
+box-shadow: none;
+border-radius: 0px;
+font-size: 20px;
+color: #fff;
+outline: 0;
+width: 100%;
+}
 }
 
 
@@ -411,7 +428,7 @@ and (orientation : landscape) {
 
 
 
- .form-group label h1 {font-size:24px;} .form-group label {font-size:14px;} .form-group input, .form-group textarea {font-size:18px;padding: 15px 15px;} .questionaire {padding:20px 0;} .count {font-size:20px;} .cover .btn-lg {padding:10px 20px; font-size:20px;}
+ .form-group label h1 {font-size:24px;} .form-group label {font-size:14px;} .form-group input,.form-group select,  .form-group textarea {font-size:18px;padding: 15px 15px;} .questionaire {padding:20px 0;} .count {font-size:20px;} .cover .btn-lg {padding:10px 20px; font-size:20px;}
 	.form-group textarea {min-height:150px;}
 
 }

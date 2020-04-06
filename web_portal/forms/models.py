@@ -2,7 +2,12 @@ from django.db import models
 from django.contrib import admin
 
 class transplant_model(models.Model):
-    Gender = models.FloatField(default=0)
+    # Gender = models.FloatField(default=0)
+    gender = (
+        ('Male', 'Male'),
+        ('Female', 'Female'),
+    )
+    Gender = models.CharField(max_length = 100, choices = gender)
     Age = models.FloatField(default=0)
     Weight = models.FloatField(default=0)
     BMI = models.FloatField(default=0)
@@ -46,7 +51,12 @@ class transplant_model(models.Model):
 admin.site.register(transplant_model)
 
 class death_model(models.Model):
-    Gender = models.FloatField(default=0)
+    # Gender = models.FloatField(default=0)
+    gender = (
+        ('Male', 'Male'),
+        ('Female', 'Female'),
+    )
+    Gender = models.CharField(max_length = 100, choices = gender)
     Age = models.FloatField(default=0)
     Weight = models.FloatField(default=0)
     BMI = models.FloatField(default=0)

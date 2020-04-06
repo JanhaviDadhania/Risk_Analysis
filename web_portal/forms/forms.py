@@ -5,8 +5,8 @@ class transplant_form(ModelForm):
     class Meta:
         model = transplant_model
         fields = [
-            'Gender',
             'Age',
+            'Gender',
             'Weight',
             'BMI',
             'Systolic_Pressure',
@@ -46,13 +46,14 @@ class transplant_form(ModelForm):
             'Vascular_Age',
             'Vascular_Age_Biological_Age'
         ]
+        help_texts = {'Gender':"mm"}
 
 class death_form(ModelForm):
     class Meta:
         model = death_model
         fields = [
-            'Gender',
             'Age',
+            'Gender',
             'Weight',
             'BMI',
             'Systolic_Pressure',

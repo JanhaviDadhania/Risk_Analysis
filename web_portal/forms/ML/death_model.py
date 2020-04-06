@@ -50,8 +50,19 @@ death_scaler = load(open('/home/janhavi/django/nnn/Risk_Analysis/web_portal/form
 # death_clf = load(open('Death_model.pkl', 'rb'))
 death_clf = load(open('/home/janhavi/django/nnn/Risk_Analysis/web_portal/forms/ML/Death_model.pkl', 'rb'))
 X = sys.argv[1]
-X = list(map(float, X.split()))
+# X = list(map(float, X.split()))
 #print(X)
+Y = []
+X = list(X.split())
+for item in X :
+    if item == "Male":
+        Y.append(0)
+    elif item == "Female":
+        Y.append(1)
+    else :
+        Y.append(float(item))
+X = Y
+
 final = []
 final.append(X)
 

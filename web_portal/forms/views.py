@@ -14,6 +14,7 @@ def transplant(request):
             #input is list that stores the values submitted by user
             input = []
             for item in form.cleaned_data.values():
+                print(item)
                 input.append(item)
             temp = ' '.join([str(elem) for elem in input])
             output = run([sys.executable, '//home//janhavi//django//nnn//Risk_Analysis//web_portal//forms//ML//transplant_model.py', temp], shell=False, stdout=PIPE)
