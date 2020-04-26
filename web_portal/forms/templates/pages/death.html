@@ -1,6 +1,5 @@
 {% extends 'pages/index.html' %}
 
-
 {% block content %}
 	{% if messages %}
 		{% for message in messages %}
@@ -41,13 +40,6 @@
 		  <div class="inner cover">
 			<div>
 			  <div class="questionaire">
-				<!-- <form method='POST'>
-					<ul class="progress-form form-group animated fadeInRightBig  activate">
-					{% csrf_token %}
-					<center>{{ form.as_table }}</center>
-					</ul>
-					<center><br><button class = "done" type = "submit">Check</button><br><br><br></center>
-				</form> -->
 			  <form method="post" novalidate>
 			  {% csrf_token %}
 
@@ -70,30 +62,6 @@
 				{{ hidden_field }}
 			  {% endfor %}
 
-			  <!-- <table border="0">
-				{% for field in form.visible_fields %}
-				  <tr>
-					<td style = "font-size:25px">{{ field.label_tag }}</td>
-					<td>
-					  {% if field.errors %}
-						<ul class = "progress-form form-group animated fadeInRightBig  activate">
-						  {% for error in field.errors %}
-							<li>{{ error }}</li>
-						  {% endfor %}
-						</ul>
-					  {% endif %}
-					  <ul class = "progress-form form-group animated fadeInRightBig  activate" style = "min-height:100px !important;">
-						  <li>{{ field }}</li>
-					  </ul>
-
-					  {% if field.help_text %}
-						<br />{{ field.help_text }}
-					  {% endif %}
-					</td>
-				  </tr>
-				{% endfor %}
-			  </table> -->
-
 			  <div class = "container">
 				 <div class = "row">
 					  {% for field in form.visible_fields %}
@@ -102,10 +70,8 @@
 					  <div  class = "col-lg-5" style = "border-radius:5px;margin-top:30px;padding-left:30px;padding-right:30px;padding-top:30px;background-color:#efefef;box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);">
 						<div class = "container">
 							<div class = "row">
-								<!-- <div class = "col-lg-1">
-								</div> -->
 								<div class = "col-lg-5" style = "font-size:25px">{{ field.label_tag }}</div>
-								<div class = "col-lg-6">
+								<div class = "col-lg-5">
 									  {% if field.errors %}
 										<ul class = "progress-form form-group animated fadeInRightBig  activate">
 										  {% for error in field.errors %}
@@ -116,12 +82,11 @@
 									  <ul class = "progress-form form-group animated fadeInRightBig  activate" style = "min-height:100px !important;">
 										  <li>{{ field }}</li>
 									  </ul>
-
-									  {% if field.help_text %}
-										<br />{{ field.help_text }}
-									  {% endif %}
 								</div>
-								<div class = "col-lg-1">
+								<div class = "col-lg-2" style = "font-size:20px;padding-top:28px">
+									{% if field.help_text %}
+									  {{ field.help_text }}
+									{% endif %}
 								</div>
 							</div>
 						</div>
@@ -130,8 +95,9 @@
 				</div>
 			  </div>
 
-			  <center><br><button class = "done" type = "submit">Check</button><br><br><br></center>
-			  </form>
+			  <center><br><div class="check">
+			    <button data-animation="ripple" style = "height:60px;padding:0px"><a data-animation="ripple" style = "color:#fff">Check<span style="font-weight: bold;"><!--Me--></span></a></button>
+			  </div><br><br><br></center>			  </form>
 			  </div>
 			</div>
 			<div class="clearfix"></div>
@@ -139,5 +105,4 @@
 		</div>
 	  </div>
 	</div>
-
 {% endblock content %}
