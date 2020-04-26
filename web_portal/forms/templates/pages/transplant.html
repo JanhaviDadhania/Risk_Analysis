@@ -34,6 +34,61 @@
 	<div class = "gap">
 	</div>
 
+<style>
+	.check {
+		/**position: absolute;**/
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		height: 50px;
+		width: 200px;
+		margin: auto;
+	}
+	*[data-animation="ripple"] {
+		/* height: 100%; */
+		width: 100%;
+		display: block;
+		outline: none;
+		padding: 20px;
+		color: #fff;
+		text-transform: uppercase;
+		background: linear-gradient(135deg, #343a40 0%,#343a40 100%);
+		box-sizing: border-box;
+		text-align: center;
+		line-height: 14px;
+		font-family: roboto, helvetica;
+		font-weight: 200;
+		letter-spacing: 1px;
+		text-decoration: none;
+		box-shadow: 0 5px 3px rgba(0, 0, 0, 0.3);
+		cursor: pointer;
+	  /*border-radius: 50px;*/
+		-webkit-tap-highlight-color: transparent;
+		border-radius: 5px;
+	}
+
+	*[data-animation="ripple"]:focus {
+		outline: none;
+	}
+
+	*[data-animation="ripple"]::selection {
+		background: transparent;
+		pointer-events: none;
+	}
+</style>
+<style>
+	@media (max-width: 1000px) {
+		label{
+			font-size:20px;
+		}
+	}
+	@media (min-width: 1500px) {
+		label{
+			font-size:23px;
+		}
+	}
+</style>
 
 	<div class="covering">
 	  <div class="container-fluid table-class">
@@ -104,7 +159,8 @@
 							<div class = "row">
 								<!-- <div class = "col-lg-1">
 								</div> -->
-								<div class = "col-lg-5" style = "font-size:25px">{{ field.label_tag }}</div>
+								<div class = "col-lg-5" style = "font-size:1.6vw">{{ field.label_tag }}</div>
+
 							    <div class = "col-lg-5">
 							          {% if field.errors %}
 							            <ul class = "progress-form form-group animated fadeInRightBig  activate">
@@ -131,7 +187,9 @@
 				</div>
 			  </div>
 
-			  <center><br><button class = "done" type = "submit">Check</button><br><br><br></center>
+			  <center><br><div class="check">
+			  	<button data-animation="ripple" style = "height:60px;padding:0px"><a data-animation="ripple" style = "color:#fff">Check<span style="font-weight: bold;"><!--Me--></span></a></button>
+			  </div><br><br><br></center>
 			  </form>
 	          </div>
 	        </div>
@@ -140,6 +198,7 @@
 	    </div>
 	  </div>
 	</div>
+
 
 	<!-- <form method='POST'>
 		{% csrf_token %}
